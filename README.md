@@ -83,6 +83,37 @@ You can repsent the file object as following:
 
 ```
 
+## DriveEngine
+
+`DriveEngine` is the bridge between JavaScript and Swift. You should register `$done` to JSContext for notify completion in JavaScript. 
+
+```swift
+class DriveEngine {
+    
+    let context: JSContext
+    
+    init(script: String) {
+        // ...
+    }
+
+    func login() async throws -> DriveItem {
+        // ...
+        // self.context["$done"] = unsafeBitCast(done, to: JSValue.self)
+        // self.context.evaluateScript("login()")
+        // ...
+    }
+
+    func listFolder(at directory: DriveItem) async throws -> [DriveItem] {
+        // ...
+    }
+
+    func getPlaybackInfo(of videoItem: DriveItem) async throws -> URLRequest {
+        // ...
+    }
+```
+
+You can add more functions to `DriveEngine` to implement more features.
+
 ## Built-ins
 
 You can call these built in functions in JavaScript.
