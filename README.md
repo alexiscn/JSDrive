@@ -4,9 +4,9 @@ A drive file browser app driven by JavaScript.
 
 You can think JSDrive is a special JSBridge with provides native file browser experience with a simple video playback support.
 
-The demo project shows show to use [alist](https://github.com/alist-org/alist) as drive provider. You can write your own provider by implementing functions in the `template.js`.
+The demo project shows how to use [alist](https://github.com/alist-org/alist) as drive provider. You can write your own provider by implementing functions in `template.js`.
 
-The purpose of this project is demostrate how you can integrate other drives without modifying native code. In other words, you can move your codes into JavaScript and load them dynamic. But be carefull, Apple maybe reject your apps if you are using private apis.
+The purpose of this project is demostrating how you can integrate cloud drives without modifying native code. In other words, you can move your codes into JavaScript and load them dynamically. 
 
 ## Requirements
 
